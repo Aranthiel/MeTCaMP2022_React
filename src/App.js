@@ -2,17 +2,23 @@
 import './App.css';
 // es necesario importar cada componente para poder ultilizarlo
 //las etiquetas de React van con mayusculas y se autocierran ej: <Button/>
-import Button from './components/button/index';
+
+import{BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from './pages/home';
+import Game from './pages/game';
+import Bio from './pages/bio';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Button text="texto del boton" apretado={()=> alert('Me hicieron click')}/> 
-        <Button text="otro boton" apretado={()=> alert('a mi tambien me hiceron click')}/> 
-      </header>
-    </div>
+    <BrowserRouter> 
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/juego" element={<Game/>}/>
+        <Route path="/bio" element={<Bio/>}/>
+      </Routes>
+    </BrowserRouter>
   );
+
 }
 
 export default App;
