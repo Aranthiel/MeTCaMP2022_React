@@ -1,17 +1,16 @@
-import {useNavigate} from 'react-router-dom';
-import Button from '../../components/button';
-
 function Bio(){
-    const navigate = useNavigate();
-
-    const clickHome= ()=>{
-        navigate("/");  
-    }
+    
     return(
-        <div>
-            <h1> Esta es la página de la Bio</h1>
-            <Button text="Inicio" apretado={clickHome}/>
-
+        <div className="container">
+            <section className="section"> 
+                <nav className="breadcrumb is-centered" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/juego">Juego</a></li>
+                    <li className="is-active"><a href="/bio">Contacto</a></li>
+                </ul>
+                </nav>
+            </section>
         </div>
         
     )
