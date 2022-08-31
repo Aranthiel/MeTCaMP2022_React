@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router-dom';
 import Button from '../../components/button';
-import QuestionForm from '../../components/QuestionForm';
+import Breadcrumb from "../../components/breadcrumb/breadcrumb";
 
 function Prueba(){
     const navigate = useNavigate();
@@ -10,12 +10,10 @@ function Prueba(){
     }
     return(
         <div>
+            <Breadcrumb direccion="/test" />
             <h1> Esta es la página de prueba</h1>
             <Button text="Inicio" apretado={clickHome}/>
             <Button text="Inicio" apretado={clickHome}/>
-            < QuestionForm />
-            < QuestionForm />
-            < QuestionForm />
         </div>
     )   
 }

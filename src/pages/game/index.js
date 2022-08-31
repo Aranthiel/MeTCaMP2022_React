@@ -1,6 +1,7 @@
 
 import QuestionCard from '../../components/QuestionCard';
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 
 const API_URL="https://62bb6e36573ca8f83298fbef.mockapi.io/metcampweb22/v1/questions/harry-potter";
@@ -8,18 +9,22 @@ const API_URL="https://62bb6e36573ca8f83298fbef.mockapi.io/metcampweb22/v1/quest
 function Game(){
 
     const [loading, setLoading ] =useState(true);
-    const [questions, setQuestions] = useState([])
+    const [questions, setQuestions] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch(API_URL)
-            .then(response => console.log (response))
             .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.log('Hubo un problema con la petición Fetch:' + error.message))
+            .then(
+                data => {
+                    console.log(data)
+                    setQuestions(data)
+                }
+            )
+            .catch(error => console.log(error))
             .finally(()=>setLoading(false));
-        }
+        }, [])
 
-    )
+    
 
     return(
         <div className="container">
@@ -31,21 +36,24 @@ function Game(){
                     <li><a href="/bio">Contacto</a></li>
                 </ul>
                 </nav>
-                { /* <div>{loading ? "Cargando": "Preguntas listas!"}</div>*/}
+                { /* <div>{loading ? "Cargando": "Preguntas listas!"}</div>   esto es un inline if */}
                 {
                     loading &&
                         <div> Cargando...</div>
                 }
                 {
                     !loading && (
-                        <form>
-                            {
-                                questions.map((pregunta) => {
-                                    return <QuestionCard key={pregunta.id} preguntaActual={pregunta} />
-                                })
+                        <div>
+                            <span>Preguntas Cargadas!</span>
+                            <form>
+                                {
+                                    questions.map((pregunta) => {
+                                        return <QuestionCard key={pregunta.id} preguntaActual={pregunta} />
+                                    })
 
-                            }
-                        </form>
+                                }
+                                </form>
+                        </div>
                     )
                 }
                 <h1>El juego</h1>
