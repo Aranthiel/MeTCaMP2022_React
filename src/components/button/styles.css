@@ -1,11 +1,3 @@
-/* estilos para el componente button */
-
-.boton {
-    background-color: red;
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 5px;
-    color: white;
-    min-width: 150px;
+.button {
+    margin: 30px;
 }

@@ -1,26 +1,20 @@
-import 'bulma/css/bulma.min.css';
 import './App.css';
-// es necesario importar cada componente para poder ultilizarlo
-//las etiquetas de React van con mayusculas y se autocierran ej: <Button/>
-
-import{BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Game from './pages/game';
-import Bio from './pages/bio';
-import Prueba from './pages/prueba';
+import About from './pages/about';
+import 'bulma/css/bulma.min.css';
 
 function App() {
   return (
-    <BrowserRouter> 
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/juego" element={<Game/>}/>
-        <Route path="/bio" element={<Bio/>}/>
-        <Route path="/test" element={<Prueba/>}/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/game' element={<Game/>}/>
+        <Route path='/about' element={<About/>}/>
       </Routes>
     </BrowserRouter>
   );
-
 }
 
 export default App;

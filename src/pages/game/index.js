@@ -1,64 +1,75 @@
+import { useState } from "react";
+import Button from "../../components/button";
+import QuestionCard from "../../components/QuestionCard";
+import Result from "../../components/Result/"
+import Breadcrumbs from "../../components/Breadcrumbs";
+import useFetch from "../../hooks/useFetch";
+import "./styles.css";
 
-import QuestionCard from '../../components/QuestionCard';
-import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
 
+const API_URL = "https://62bb6e36573ca8f83298fbef.mockapi.io/metcampweb22/v1/questions/harry-potter";
 
-const API_URL="https://62bb6e36573ca8f83298fbef.mockapi.io/metcampweb22/v1/questions/harry-potter";
+function Game() {
+    const { loading, data: questions } = useFetch(API_URL);
+    const [selectedAnswers, setSelectedAnswers] = useState([]);
+    const [result, setResult] = useState(0);
+    const [mostrarResultado, setMostrarResultado] = useState(false);
 
-function Game(){
-
-    const [loading, setLoading ] =useState(true);
-    const [questions, setQuestions] = useState([]);
-
-    useEffect(() => {
-        fetch(API_URL)
-            .then(response => response.json())
-            .then(
-                data => {
-                    console.log(data)
-                    setQuestions(data)
-                }
-            )
-            .catch(error => console.log(error))
-            .finally(()=>setLoading(false));
-        }, [])
-
+    function calcularResultado() {
+        const respuestasCorrectas = selectedAnswers.filter((respuesta) => respuesta.valorOpcion === true)
+        setResult(respuestasCorrectas.length)
+        setMostrarResultado(true)
+    }
     
+    const [crumbs, setCrumbs] = useState([ {title:'Home', ruta: "/", className:""}, {title:'Juego', ruta: "/game", className:"is-active"}, {title:'Info', ruta: "/about", className:""}]);
 
-    return(
+    return (
         <div className="container">
-            <section className="section"> 
-                <nav className="breadcrumb is-centered" aria-label="breadcrumbs">
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li className="is-active"><a href="/juego">Juego</a></li>
-                    <li><a href="/bio">Contacto</a></li>
-                </ul>
-                </nav>
-                { /* <div>{loading ? "Cargando": "Preguntas listas!"}</div>   esto es un inline if */}
+            <section className="section">
+                
+                <Breadcrumbs crumbs={ crumbs } />
+               
                 {
                     loading &&
-                        <div> Cargando...</div>
+                    <div>Cargando...</div>
                 }
                 {
                     !loading && (
-                        <div>
-                            <span>Preguntas Cargadas!</span>
-                            <form>
-                                {
-                                    questions.map((pregunta) => {
-                                        return <QuestionCard key={pregunta.id} preguntaActual={pregunta} />
-                                    })
-
-                                }
-                                </form>
+                        <div className="container">
+                        <form className="is-flex">
+                            {
+                                questions.map((pregunta) => {
+                                    return <QuestionCard
+                                        key={pregunta.id}
+                                        preguntaActual={pregunta}
+                                        selectedAnswers={selectedAnswers}
+                                        setSelectedAnswers={setSelectedAnswers}
+                                        mostrarResultado={mostrarResultado}
+                                    />
+                                })
+                            }
+                        </form>
                         </div>
                     )
                 }
-                <h1>El juego</h1>
+                <div className="level">
+                    <div className="level-left">
+                        {
+                            mostrarResultado &&
+                            <Result valorResultado={result} />
+                        }
+                    </div>
+                    <div className="level-right">
+                        <Button
+                            disabled={selectedAnswers.length !== questions.length || mostrarResultado}
+                            onClick={() => calcularResultado()}
+                            text="Validar" />
+
+                    </div>
+                </div>
             </section>
-        </div>    
+        </div>
     )
 }
+
 export default Game;
