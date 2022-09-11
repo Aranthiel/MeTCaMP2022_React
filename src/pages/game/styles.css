@@ -7,3 +7,10 @@
     align-content: center;
 } 
 
+ 
+@media screen and (max-width: 768px){
+    div.level-right.gamepage, div.level-left.gamepage{
+       text-align: center;
+       margin-top: 1.5rem;
+    }
+} 

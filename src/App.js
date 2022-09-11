@@ -8,7 +8,7 @@ import packageInfo from "../package.json";
 
 function App() {
   return (
-    <BrowserRouter basename={getBasename}>
+    <BrowserRouter basename={getBasename()}>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/game' element={<Game/>}/>

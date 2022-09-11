@@ -56,13 +56,13 @@ function Game() {
                     )
                 }
                 <div className="level">
-                    <div className="level-left">
+                    <div className="level-left gamepage">
                         {
                             mostrarResultado &&
                             <Result valorResultado={result} />
                         }
                     </div>
-                    <div className="level-right">
+                    <div className="level-right gamepage">
                         <Button
                             disabled={selectedAnswers.length !== questions.length || mostrarResultado}
                             onClick={() => calcularResultado()}

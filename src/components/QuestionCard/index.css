@@ -1,34 +1,54 @@
-.card.mi-carta {
-    box-sizing: content-box;
-    background-color: rgb(243, 243, 243);
-    box-shadow: 0 1px 2px rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 7%), 0 4px 8px rgb(0 0 0 / 7%), 0 8px 16px rgb(0 0 0 / 7%), 0 16px 32px rgb(0 0 0 / 7%), 0 32px 64px rgb(0 0 0 / 7%);
-    padding: 1.5rem;
-    border-radius: 3rem;
-    width: 75%;
-    max-width: 900px;
-    margin: 0.5rem;
-    max-height: 16rem;
-    overflow: hidden;
-}
-
-.mi-imagen{
-   margin:auto; 
-   border-top-left-radius: 3rem;
-
-}
-.column.card-image{
-    display:inline-block;
-    padding: 0px;
-}
-
-.card-image{
-    width:30px;
+@media screen and (min-width: 770px){
+    .card.mi-carta {
+        box-sizing: content-box;
+        background-color: rgb(243, 243, 243);
+        box-shadow: 0 1px 2px rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 7%), 0 4px 8px rgb(0 0 0 / 7%), 0 8px 16px rgb(0 0 0 / 7%), 0 16px 32px rgb(0 0 0 / 7%), 0 32px 64px rgb(0 0 0 / 7%);
+        padding: 1.5rem;
+        border-radius: 3rem;
+        width: 75%;
+        max-width: 900px;
+        margin: 0.5rem;
+        max-height: 16rem;
+        overflow: hidden;
     }
 
-.card-image:first-child img {
-    margin-top: 1rem;
-    max-height: 12rem;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    border-bottom-left-radius: 2.5rem;
+    .mi-imagen{
+    margin:auto; 
+    border-top-left-radius: 3rem;
+
     }
+    .column.card-image{
+        display:inline-block;
+        padding: 0px;
+    }
+
+    .card-image{
+        width:30px;
+    }
+
+    .card-image:first-child img {
+        margin-top: 1rem;
+        max-height: 12rem;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        border-bottom-left-radius: 22%;
+    }
+}
+    
+@media screen and (max-width: 769px){
+    .card-image:first-child img {
+        display:none;
+    }
+
+    .card.mi-carta {
+        box-sizing: content-box;
+        background-color: rgb(243, 243, 243);
+        box-shadow: 0 1px 2px rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 7%), 0 4px 8px rgb(0 0 0 / 7%), 0 8px 16px rgb(0 0 0 / 7%), 0 16px 32px rgb(0 0 0 / 7%), 0 32px 64px rgb(0 0 0 / 7%);
+        padding: 1.5rem;
+        border-radius: 3rem;
+        width:60%;
+        max-width: 475px;
+        margin: 0.5rem;
+        overflow: auto;
+    }
+}
