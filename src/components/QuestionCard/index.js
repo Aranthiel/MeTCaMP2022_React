@@ -51,13 +51,14 @@ function QuestionCard({ preguntaActual, selectedAnswers, setSelectedAnswers, mos
                     </div>
             </div>
             <div className="colums level">
-                    <div className="column is-3 card-image">
+                    <div className="column card-image  is-one-quarter-mobile is-one-quarter-tablet is-one-quarter-desktop">
+                        
                         <figure className="image mi-imagen level-left" >
                             {/* <img width="50" height="50" src={`../../assets/q${preguntaActual.id}.png`} alt={preguntaActual.id}></img> */}
-                            <img width="50" height="50" src={url[`${preguntaActual.id}`-1]} alt={preguntaActual.id}></img>
+                            <img src={url[`${preguntaActual.id}`-1]} alt={preguntaActual.id}></img>
                         </figure>
                     </div>
-                    <div className="column is-9 card-content level-right">
+                    <div className="column card-content level-right is-two-third-mobile is-two-third-tablet is-two-third-desktop">
                         {
                             preguntaActual.answers.map((opcion) => (
                                 <div className="content" 

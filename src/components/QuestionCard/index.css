@@ -1,27 +1,34 @@
 .card.mi-carta {
+    box-sizing: content-box;
     background-color: rgb(243, 243, 243);
     box-shadow: 0 1px 2px rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 7%), 0 4px 8px rgb(0 0 0 / 7%), 0 8px 16px rgb(0 0 0 / 7%), 0 16px 32px rgb(0 0 0 / 7%), 0 32px 64px rgb(0 0 0 / 7%);
     padding: 1.5rem;
     border-radius: 3rem;
     width: 75%;
+    max-width: 900px;
     margin: 0.5rem;
-    height: 16rem;
+    max-height: 16rem;
+    overflow: hidden;
 }
-.shadow-dreamy{
-    box-shadow:0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07)
-}
+
 .mi-imagen{
-    height: 12vw;
-    width: 12vw;
-    /*border-style:solid;
-    border-width:10px;
-    border-color:  rgb(197, 116, 16);*/
-    border-radius: 3rem;
-    border-radius: 2.5rem;
-    border-top-right-radius: 2.5rem;
-    margin:auto;
+   margin:auto; 
+   border-top-left-radius: 3rem;
 
 }
-.column{
+.column.card-image{
     display:inline-block;
+    padding: 0px;
 }
+
+.card-image{
+    width:30px;
+    }
+
+.card-image:first-child img {
+    margin-top: 1rem;
+    max-height: 12rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-left-radius: 2.5rem;
+    }
