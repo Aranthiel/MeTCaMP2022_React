@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/MeTCaMP2022_React/static/css/main.9e8f828e.css",
+    "main.js": "/MeTCaMP2022_React/static/js/main.3c85ac17.js",
+    "static/js/787.7c27c211.chunk.js": "/MeTCaMP2022_React/static/js/787.7c27c211.chunk.js",
+    "static/media/marauders.png": "/MeTCaMP2022_React/static/media/marauders.649fced138e773f92ad1.png",
+    "static/media/background.png": "/MeTCaMP2022_React/static/media/background.e3e29d8361dd52752faa.png",
+    "static/media/NAM.png": "/MeTCaMP2022_React/static/media/NAM.7a51474d35f27c7de0c8.png",
+    "static/media/q8.png": "/MeTCaMP2022_React/static/media/q8.aa8fea4b01b6e952ed48.png",
+    "static/media/q10.png": "/MeTCaMP2022_React/static/media/q10.0d2f2a3a060d536c1894.png",
+    "static/media/q9.png": "/MeTCaMP2022_React/static/media/q9.c6fa2585a87bb931f285.png",
+    "static/media/q6.png": "/MeTCaMP2022_React/static/media/q6.968f389fa60cc3873ee9.png",
+    "static/media/q1.png": "/MeTCaMP2022_React/static/media/q1.5af61fd678d2b1c21883.png",
+    "static/media/q3.png": "/MeTCaMP2022_React/static/media/q3.9151c13a608a22712854.png",
+    "static/media/q7.png": "/MeTCaMP2022_React/static/media/q7.5a02f03d6cb790917848.png",
+    "static/media/q4.png": "/MeTCaMP2022_React/static/media/q4.8e70f70a8fd70df714e5.png",
+    "static/media/q2.png": "/MeTCaMP2022_React/static/media/q2.e56c61ad98ca0fea1884.png",
+    "static/media/q5.png": "/MeTCaMP2022_React/static/media/q5.34619ade2efe1374e059.png",
+    "static/media/mal.png": "/MeTCaMP2022_React/static/media/mal.2ecd040144ebca02894f.png",
+    "static/media/bien.png": "/MeTCaMP2022_React/static/media/bien.73e3c7b895c60d739a7f.png",
+    "index.html": "/MeTCaMP2022_React/index.html",
+    "main.9e8f828e.css.map": "/MeTCaMP2022_React/static/css/main.9e8f828e.css.map",
+    "main.3c85ac17.js.map": "/MeTCaMP2022_React/static/js/main.3c85ac17.js.map",
+    "787.7c27c211.chunk.js.map": "/MeTCaMP2022_React/static/js/787.7c27c211.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e8f828e.css",
+    "static/js/main.3c85ac17.js"
+  ]
+}
