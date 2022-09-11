@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MeTCaMP2022_React/static/css/main.9e8f828e.css",
-    "main.js": "/MeTCaMP2022_React/static/js/main.b5b96b49.js",
+    "main.css": "/MeTCaMP2022_React/static/css/main.6d3e8bc1.css",
+    "main.js": "/MeTCaMP2022_React/static/js/main.738c2220.js",
     "static/js/787.7c27c211.chunk.js": "/MeTCaMP2022_React/static/js/787.7c27c211.chunk.js",
     "static/media/marauders.png": "/MeTCaMP2022_React/static/media/marauders.649fced138e773f92ad1.png",
     "static/media/background.png": "/MeTCaMP2022_React/static/media/background.e3e29d8361dd52752faa.png",
@@ -19,12 +19,12 @@
     "static/media/mal.png": "/MeTCaMP2022_React/static/media/mal.2ecd040144ebca02894f.png",
     "static/media/bien.png": "/MeTCaMP2022_React/static/media/bien.73e3c7b895c60d739a7f.png",
     "index.html": "/MeTCaMP2022_React/index.html",
-    "main.9e8f828e.css.map": "/MeTCaMP2022_React/static/css/main.9e8f828e.css.map",
-    "main.b5b96b49.js.map": "/MeTCaMP2022_React/static/js/main.b5b96b49.js.map",
+    "main.6d3e8bc1.css.map": "/MeTCaMP2022_React/static/css/main.6d3e8bc1.css.map",
+    "main.738c2220.js.map": "/MeTCaMP2022_React/static/js/main.738c2220.js.map",
     "787.7c27c211.chunk.js.map": "/MeTCaMP2022_React/static/js/787.7c27c211.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e8f828e.css",
-    "static/js/main.b5b96b49.js"
+    "static/css/main.6d3e8bc1.css",
+    "static/js/main.738c2220.js"
   ]
 }
