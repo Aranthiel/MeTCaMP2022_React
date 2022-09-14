@@ -8,8 +8,8 @@ function Home() {
     const onClickButton = () => {
        navigate('/game');
     } 
-    return (
-        <section className="hero is-medium is-fullheight" style={{backgroundImage: `url(${background})`, backgroundSize: "cover"}}>
+    return (<section className="hero is-medium is-fullheight" style={{backgroundImage: `url(${background})`, backgroundSize: "cover"}}>
+        
         <div className="hero-body">
             <div className="container has-text-centered">
                 <Button onClick={() => onClickButton('/game')} text='MetCamp Quiz' />

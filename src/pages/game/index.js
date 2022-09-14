@@ -4,7 +4,7 @@ import QuestionCard from "../../components/QuestionCard";
 import Result from "../../components/Result/"
 import Breadcrumbs from "../../components/Breadcrumbs";
 import useFetch from "../../hooks/useFetch";
-import MaraudersMap from "../../assets/marauders.png"
+import diagonAlley from "../../assets/fondo.png"
 import "./styles.css";
 
 
@@ -25,7 +25,8 @@ function Game() {
     const [crumbs, setCrumbs] = useState([ {title:'Home', ruta: "/", className:""}, {title:'Juego', ruta: "/game", className:"is-active"}, {title:'Info', ruta: "/about", className:""}]);
 
     return (
-       <section className="hero is-medium is-fullheight" style={{backgroundColor: "rgb(218, 207, 192)"}}> 
+       <section className="hero is-medium is-fullheight" style={{backgroundImage: `url(${diagonAlley})`, backgroundSize: "cover"}}>
+
        {/* style={{backgroundImage: `url(${MaraudersMap})`, backgroundSize: "cover"}} */}
         <div className="container">
             <section className="section">
